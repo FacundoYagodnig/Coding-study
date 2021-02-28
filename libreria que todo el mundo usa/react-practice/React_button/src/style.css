@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter {
+  background-color: blueviolet;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  outline: none;
+}
+
+.number-counter {
+  font-size: 32px;
+}
+
+.button {
+  background-color: cyan;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 4px;
+}
+
+.text {
+}
