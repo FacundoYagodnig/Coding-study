@@ -1,0 +1,43 @@
+.main {
+  background-color: rgb(252, 252, 252);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.div-main {
+  grid-column: 2/2;
+}
+
+h1 {
+  color: black;
+}
+
+.button {
+  height: 140px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgb(193, 175, 245);
+  background: linear-gradient(
+    180deg,
+    rgb(190, 171, 245) 59%,
+    rgb(173, 172, 172) 80%
+  );
+}
+
+.div-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/1;
+}
+
+.img {
+  width: 55%;
+  height: 700px;
+  border: 1px solid black;
+  box-shadow: 2px 0px 10px 2px;
+}

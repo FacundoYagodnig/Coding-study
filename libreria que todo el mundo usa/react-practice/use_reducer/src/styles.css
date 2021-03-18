@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  flex-direction: column;
+  line-height: 1.5;
+  width: 400px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.card {
+  background-color: aqua;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0.2);
+  margin: 0;
+  padding: 6px;
+
+  overflow: hidden;
+}
