@@ -76,12 +76,12 @@
   display: flex;
   text-align: center;
   flex-direction: column;
-  background: rgb(75, 0, 130);
+  background: rgb(102, 45, 145);
   background: linear-gradient(
     180deg,
-    rgba(75, 0, 130, 1) 22%,
-    rgba(102, 45, 145, 1) 44%,
-    rgba(69, 44, 99, 1) 82%
+    rgba(102, 45, 145, 1) 16%,
+    rgba(69, 44, 99, 1) 51%,
+    rgba(75, 0, 130, 1) 88%
   );
 }
 

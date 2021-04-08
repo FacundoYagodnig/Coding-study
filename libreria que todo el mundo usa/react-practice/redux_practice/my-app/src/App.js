@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Skills from "./pages/Skills";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { GlobalStyles } from "./styles/GlobalStyles";
 
 import "./App.css";
 import "./styles/index.css";
@@ -16,6 +17,7 @@ import "./components/MainProyects/MainProyects.css";
 function App() {
   return (
     <Router>
+      <GlobalStyles />
       <Navbar></Navbar>
       <Switch>
         <Route exact path="/">
