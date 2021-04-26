@@ -9,4 +9,4 @@ const todoPrompts = [
   },
 ];
 
-export { todoPrompts };
+module.exports = todoPrompts;

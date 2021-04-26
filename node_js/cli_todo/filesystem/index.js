@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-import { Command } from "commander/esm.mjs";
-import inquirer from "inquirer";
-import figlet from "figlet";
-import chalk from "chalk";
+const { program } = require("commander");
+const inquirer = require("inquirer");
+const figlet = require("figlet");
+const chalk = require("chalk");
 
-import { todoPrompts } from "./prompts.js";
-import { saveTodo, getTodos } from "./utils.js";
+const { todoPrompts } = require("./prompts");
+const saveTodo = require("./utils");
+const getTodos = require("./utils");
 
 const log = console.log;
 
-const program = new Command();
 const { prompt } = inquirer;
 
 program
