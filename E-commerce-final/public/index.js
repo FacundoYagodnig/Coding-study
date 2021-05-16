@@ -16,7 +16,7 @@ let localStore = localStorage.getItem("users");
 
 const fetchData = async () => {
   try {
-    const res = await fetch("/E-commerce-final/public/api.json");
+    const res = await fetch("api.json");
     const data = await res.json();
     recorrerLista(data);
   } catch (error) {
@@ -41,7 +41,7 @@ const cancelar = document.querySelector(".cancelar");
 const fragment = new DocumentFragment();
 const logOut = document.getElementById("log-out");
 
-let cart = {};
+let cart = {}; //[]
 
 class Carrito {
   //adquiero la info
@@ -75,7 +75,17 @@ class Carrito {
       itemCarrito.cantidad++;
     }
     //DE OTRO MODO LO AGREGO SIMPLEMENTE
-    cart[itemCarrito.id] = { ...itemCarrito };
+    //
+    //
+    cart[itemCarrito.id] = itemCarrito.id;
+    let key = cart[itemCarrito.id];
+    cart[key] = { ...itemCarrito };
+    console.log(cart[key]);
+
+    // cart = { ...itemCarrito };
+    // console.log(cart);
+
+    // cart = [...cart,  {...itemCarrito}]  - "[{},{},{}]" -  {key: {},}  <li  key> obj[key].
     this.updateCartNumber();
     this.renderCarrito();
   }
@@ -113,7 +123,6 @@ class Carrito {
         carrito.classList.add("carrito3");
         cart = {};
         badgeCart.innerText = "";
-        localStorage.removeItem("cart");
       }, 50000000);
     }
 
@@ -159,6 +168,7 @@ class Carrito {
 
     items.appendChild(fragment);
     this.updateTotal();
+
     localStorage.setItem("cart", JSON.stringify(cart));
   }
 
@@ -192,11 +202,6 @@ class Carrito {
       carrito.classList.remove("carrito2");
       carrito.classList.add("carrito3");
       badgeCart.innerHTML = "";
-
-      e.stopPropagation();
-    });
-    btnCompletarCarrito.addEventListener("click", (e) => {
-      alert("COMPRASTE ESTE PRODUCTO");
 
       e.stopPropagation();
     });
